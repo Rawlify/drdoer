@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import { siteConfig } from "@/data/siteConfig";
 import CTASection from "@/components/sections/CTASection";
 import StatsSection from "@/components/sections/StatsSection";
+import { assetPath } from "@/lib/utils";
 import {
   Sparkles,
   Target,
@@ -82,7 +83,7 @@ export default function AboutPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-3xl overflow-hidden h-72 sm:h-96 w-full shadow-xl">
           <Image
-            src="/assets/notepad-laptop-concept.jpg"
+            src={assetPath("/assets/notepad-laptop-concept.jpg")}
             alt="DrDoer workspace and conceptual planning"
             fill
             priority
@@ -138,7 +139,7 @@ export default function AboutPage() {
             <div className="lg:col-span-4 flex flex-col items-center text-center p-6 bg-white/90 rounded-2xl border border-brand-200 shadow-md">
               <div className="relative h-20 w-44 mb-3">
                 <Image
-                  src="/assets/rawlify-logo.png"
+                  src={assetPath("/assets/rawlify-logo.png")}
                   alt="Rawlify Logo"
                   fill
                   className="object-contain"

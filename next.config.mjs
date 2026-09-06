@@ -4,16 +4,19 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const isGithubActions = process.env.GITHUB_ACTIONS === "true";
+const isProd = process.env.NODE_ENV === "production";
 const repoName = "drdoer";
+const basePath = isProd ? `/${repoName}` : "";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: isGithubActions ? `/${repoName}` : "",
-  assetPrefix: isGithubActions ? `/${repoName}/` : "",
+  basePath: basePath,
+  assetPrefix: basePath ? `${basePath}/` : "",
   trailingSlash: true,
-  reactStrictMode: true,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   images: {
     unoptimized: true,
   },

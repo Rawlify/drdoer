@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 import { servicesData } from "@/data/services";
+import { assetPath } from "@/lib/utils";
 
 export default function ServicesPreview() {
   return (
@@ -33,7 +34,7 @@ export default function ServicesPreview() {
               {/* Image preview */}
               <div className="relative h-52 w-full overflow-hidden bg-slate-100">
                 <Image
-                  src={service.image}
+                  src={assetPath(service.image)}
                   alt={service.imageAlt}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"

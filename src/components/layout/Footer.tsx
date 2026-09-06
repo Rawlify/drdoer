@@ -4,6 +4,7 @@ import Image from "next/image";
 import { siteConfig } from "@/data/siteConfig";
 import { servicesData } from "@/data/services";
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { assetPath } from "@/lib/utils";
 
 export default function Footer() {
   return (
@@ -15,7 +16,7 @@ export default function Footer() {
             <Link href="/" className="inline-block">
               <div className="relative h-12 w-40 brightness-0 invert opacity-90 hover:opacity-100 transition-opacity">
                 <Image
-                  src="/assets/2.png"
+                  src={assetPath("/assets/2.png")}
                   alt="DrDoer Logo"
                   fill
                   className="object-contain object-left"

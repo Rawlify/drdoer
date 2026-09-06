@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import { servicesData } from "@/data/services";
 import { siteConfig } from "@/data/siteConfig";
 import CTASection from "@/components/sections/CTASection";
+import { assetPath } from "@/lib/utils";
 import {
   CheckCircle2,
   ArrowRight,
@@ -101,7 +102,7 @@ export default function ServicesPage() {
                   <div className="glass-frame relative rounded-3xl overflow-hidden">
                     <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-lg bg-slate-100">
                       <Image
-                        src={service.image}
+                        src={assetPath(service.image)}
                         alt={service.imageAlt}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -132,7 +133,7 @@ export default function ServicesPage() {
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-900 text-white text-xs font-bold">
                       <div className="relative w-3.5 h-3.5">
                         <Image
-                          src="/assets/rawlify-logo.png"
+                          src={assetPath("/assets/rawlify-logo.png")}
                           alt="Rawlify Logo"
                           fill
                           className="object-contain"

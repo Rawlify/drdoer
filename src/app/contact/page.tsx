@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { siteConfig } from "@/data/siteConfig";
 import ContactForm from "@/components/sections/ContactForm";
+import { assetPath } from "@/lib/utils";
 import {
   Phone,
   Mail,
@@ -152,7 +153,7 @@ export default function ContactPage() {
             <div className="glass-frame relative rounded-3xl overflow-hidden shadow-lg hidden sm:block">
               <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden">
                 <Image
-                  src="/assets/design.jpg"
+                  src={assetPath("/assets/design.jpg")}
                   alt="DrDoer Graphic and Academic Support"
                   fill
                   className="object-cover"

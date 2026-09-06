@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Clock, Award, Sparkles, Code2 } from "lucide-react";
+import { assetPath } from "@/lib/utils";
 
 export default function HeroSection() {
   return (
@@ -83,7 +84,7 @@ export default function HeroSection() {
               <div className="glass-frame relative rounded-3xl overflow-hidden animate-float">
                 <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl">
                   <Image
-                    src="/assets/LandingHome.jpg"
+                    src={assetPath("/assets/LandingHome.jpg")}
                     alt="DrDoer Professional Assignment and Software Development Services"
                     fill
                     priority

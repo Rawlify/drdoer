@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowRight, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
+import { assetPath } from "@/lib/utils";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +45,7 @@ export default function Navbar() {
           >
             <div className="relative h-10 w-32 sm:w-36 overflow-hidden rounded-lg">
               <Image
-                src="/assets/Real Estate Logo navbar.png"
+                src={assetPath("/assets/Real Estate Logo navbar.png")}
                 alt="DrDoer Logo"
                 fill
                 priority
